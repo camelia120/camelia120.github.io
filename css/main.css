@@ -1,0 +1,2757 @@
+body {
+  background-color: #2d2d2d;
+  /* background-image: url(../img/purpleblur.png); */
+  width: 100%;
+}
+
+/*泡泡動畫*/
+@keyframes updown {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 90%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@keyframes updown2 {
+  0% {
+    top: 20%;
+    left: 60%;
+  }
+  50% {
+    top: 0;
+    background-color: #7b78f7;
+  }
+  100% {
+    top: 20%;
+    left: 60%;
+  }
+}
+@keyframes updown3 {
+  0% {
+    top: 90%;
+    left: 50%;
+  }
+  50% {
+    top: 10%;
+    background-color: #7b78f7;
+  }
+  100% {
+    top: 90%;
+    left: 50%;
+  }
+}
+
+@keyframes leftright {
+  0% {
+    left: 10%;
+    top: 80%;
+  }
+  50% {
+    left: 100%;
+    top: 30%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    left: 10%;
+    top: 80%;
+  }
+}
+@keyframes leftright2 {
+  0% {
+    left: 70%;
+    top: 5%;
+  }
+  50% {
+    left: 20%;
+    top: 40%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    top: 5%;
+    left: 70%;
+  }
+}
+@keyframes leftright3 {
+  0% {
+    left: 30%;
+  }
+  50% {
+    left: 0%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    left: 30%;
+  }
+}
+
+@keyframes vastag {
+  0% {
+    width: 8vh;
+  }
+  50% {
+    width: 32vh;
+    background-color: #3d19cf;
+    opacity: 40%;
+  }
+  100% {
+    width: 8vh;
+  }
+}
+
+@keyframes forog {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.background {
+  width: 100%;
+  position: fixed;
+}
+.bubble {
+  height: 40vh;
+  border-radius: 80%;
+  background: #3d19cf;
+  position: absolute;
+  filter: blur(10vh);
+  animation: updown linear 32s infinite, leftright ease-in-out 23s infinite,
+    vastag linear 20s infinite, forog linear 31s infinite;
+}
+.bubble:nth-child(2) {
+  animation: updown ease-in 20s infinite, leftright ease-in-out 30s infinite,
+    vastag linear 23s infinite, forog linear 25s infinite;
+}
+.bubble:nth-child(3) {
+  animation: updown2 ease-out 35s infinite, leftright2 ease-in-out 25s infinite,
+    vastag linear 29s infinite, forog linear 23s infinite;
+}
+.bubble:nth-child(4) {
+  animation: updown3 ease-in-out 25s infinite,
+    leftright3 ease-in-out 29s infinite, vastag linear 31s infinite,
+    forog linear 21s infinite;
+}
+.bubble:nth-child(5) {
+  animation: updown2 ease-in-out 22s infinite,
+    leftright2 ease-in-out 31s infinite, vastag linear 35s infinite,
+    forog linear 30s infinite;
+}
+.bubble:nth-child(6) {
+  animation: updown ease-in-out 19s infinite, leftright ease-in-out 20s infinite,
+    vastag linear 25s infinite, forog linear 30s infinite;
+}
+.bubble:last-child {
+  animation: updown3 linear 33s infinite, leftright3 ease-in-out 28s infinite,
+    vastag linear 19s infinite, forog linear 32s infinite;
+}
+
+/*navigation*/
+.navigation {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  /*background-image: url(../img/menu.png);*/
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(14px);
+  width: 100vw;
+  padding: 2.75% 5%;
+}
+.logo {
+  display: inline-block;
+  width: 17.35%;
+}
+.logo img {
+  width: 100%;
+}
+/*nav選項*/
+.menu-wrapper {
+  display: inline-block;
+  width: 78%;
+  vertical-align: middle;
+  padding-left: 30%;
+}
+.menu a:hover {
+  color: #c0c3ff;
+}
+.menu {
+  display: inline-block;
+  width: 19.3%;
+}
+.menu a {
+  vertical-align: middle;
+  font-family: "GenYoGothic TW";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 140%;
+  color: #ffffff;
+  text-decoration: none;
+}
+/*漢堡選單*/
+.burger {
+  display: inline-block;
+  width: 3%;
+  position: relative;
+}
+.burger img {
+  width: 100%;
+}
+.burger span {
+  cursor: pointer;
+}
+.submenu.dropdown {
+  display: block;
+}
+/*css animation*/
+@keyframes slide {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 400%;
+  }
+}
+.submenu {
+  position: fixed;
+  display: none;
+  background-color: #383838;
+  opacity: 90%;
+  backdrop-filter: blur(14px);
+  width: 100vw;
+  left: 0;
+  top: 100%;
+  height: 400%;
+  padding: 0%;
+  animation: slide 0.4s;
+}
+.submenu .dropdown {
+  width: 100%;
+}
+.sub {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  margin: 2.2% 20%;
+}
+.top {
+  border-bottom: #ffffff solid 1px;
+  margin-top: 6.2%;
+}
+.sub li {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+.top li {
+  margin-bottom: 5.2%;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-image: url(../img/menu.png);
+  backdrop-filter: blur(14px);
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .navigation {
+    padding: 4% 5%;
+  }
+  .menu-wrapper {
+    display: none;
+  }
+  .logo {
+    margin-left: 34.5%;
+    width: 30%;
+  }
+  .burger {
+    margin-left: 20%;
+    width: 6%;
+  }
+
+  .sub {
+    display: block;
+    border: 0;
+    margin: 2.2% 40%;
+  }
+  .sub li {
+    width: 40%;
+    display: block;
+    text-align: center;
+    margin-bottom: 5.2%;
+  }
+  .sub a {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .submenu {
+    height: 830%;
+    animation: slide 0.5s;
+    padding-top: 6%;
+  }
+  @keyframes slide {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 830%;
+    }
+  }
+}
+
+/*banner*/
+.banner {
+  margin-top: 11.6%;
+  width: 100%;
+}
+.banner img {
+  display: inline-block;
+  width: 100%;
+}
+.mob {
+  display: none;
+}
+@media (max-width: 576px) {
+  .banner {
+    display: none;
+  }
+  .mob {
+    margin-top: 20%;
+    display: block;
+    margin-bottom: 3%;
+  }
+}
+
+/*快速訂票大div*/
+.fastbook {
+  position: relative;
+  z-index: 998;
+}
+.nav {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  height: 269px;
+  /*background-image: url(../img/Sticketbg.png);*/
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  margin: 4% 0% 4% 5%;
+  padding: 2% 2%;
+  background-size: contain;
+}
+.nav img {
+  display: inline-block;
+  width: 100%;
+}
+/*標籤*/
+.nav-link {
+  /*min-width: 150px;*/
+  display: inline-block;
+  width: 85%;
+  text-align: center;
+  font-family: "GenYoGothic TW";
+  font-style: normal;
+  font-size: 140%;
+  color: #2d2d2d;
+  line-height: 60px;
+  padding: 0%;
+  margin: 7.9% 7.5%;
+}
+.nav-pills .nav-link {
+  border: 2px solid #c0c3ff;
+  border-radius: 35px;
+}
+.nav-link:hover {
+  background-color: #c0c3ff;
+  color: #2d2d2d;
+  border: 2px solid #c0c3ff;
+  border-radius: 35px;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #7b78f7;
+  border: 2px solid #7b78f7;
+  border-radius: 35px;
+}
+@media (max-width: 991px) {
+  .d-flex .align-items-start {
+    display: block !important;
+  }
+  .d-flex {
+    display: block !important;
+  }
+  .nav {
+    display: block;
+    width: 80%;
+    height: 95px;
+    margin: 4% 10%;
+    padding: 3% 10%;
+  }
+  .nav-link {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+  }
+  .nav-pills .nav-link,
+  .nav-link:hover {
+    border: 1px solid #c0c3ff;
+    width: 37%;
+    margin: 0 5%;
+    vertical-align: middle;
+  }
+  .v-pills-home {
+    vertical-align: middle;
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    border: 1px solid #7b78f7;
+    width: 37%;
+    margin: 0 5%;
+    vertical-align: middle;
+  }
+}
+/*標籤內容大div*/
+.tab-content {
+  display: inline-block;
+  vertical-align: middle;
+  /*background-image: url(../img/Lticketbg.png);*/
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.40242034313725494) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 93%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90%;
+  margin: 4% 5% 4% 1%;
+}
+.tab-content img {
+  width: 100%;
+  display: inline-block;
+}
+.tab-pane {
+  /*padding: 3.3% 5%;*/
+  height: 269px;
+}
+@media (max-width: 991px) {
+  .tab-content {
+    width: 80%;
+    display: block;
+    margin: 4% auto;
+  }
+  .tab-pane {
+    height: 380px;
+  }
+}
+/* 全部select bar 
+.dropdown1,
+.dropdown2 {
+  display: inline-block;
+  width: 100%;
+  margin: 1.24% 0px;
+}*/
+/*icon img*/
+.tab-pane img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3%;
+  margin: 0% 1.5% 0 0;
+}
+/*@media (max-width: 991px) {
+  .dropdown1,
+  .dropdown2 {
+    display: block;
+  }
+  .tab-pane img {
+    width: 6%;
+  }
+}*/
+/* select bar 選擇影城 */
+.theater-bar img {
+  position: absolute;
+  left: 3.5%;
+  top: 23%;
+  width: 2.7%;
+  margin: 0 1.5% 0 0;
+}
+.select-box {
+  display: flex;
+  width: 33.5%;
+  flex-direction: column;
+  position: absolute;
+  left: 6%;
+  top: 17%;
+  padding: 0 1.5%;
+}
+.select-box .options-container {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected {
+  background: none;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 5%;
+  position: relative;
+  order: 0;
+}
+
+.select-theater {
+  position: absolute;
+  top: 35%;
+  left: 13%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 4.8%;
+  right: 8%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box .options-container.active {
+  position: relative;
+  max-height: 600px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.89793855042016806) 0%,
+    rgba(255, 255, 255, 0.4660057773109243) 51%,
+    rgba(192, 195, 255, 0.89793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box .options-container::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+.select-box .option {
+  font-family: "GenYoGothic TW";
+  margin: 3.2% 1.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 3.1% 7.4%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.hover-off {
+  pointer-events: none;
+}
+
+.select-box .option:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box label {
+  cursor: pointer;
+}
+.selected {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .theater-bar img {
+    width: 5%;
+    top: 12%;
+    left: 7.5%;
+  }
+  .select-box {
+    width: 75%;
+    left: 15%;
+    top: 8%;
+  }
+  .select-theater {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected {
+    height: 43px;
+  }
+  .select-box .option {
+    font-size: 14px;
+  }
+  .select-box .options-container.active + .selected::after {
+    top: -15px;
+  }
+  .selected::after {
+    width: 4%;
+  }
+  .select-box .options-container::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+/* select bar 選擇日期 */
+.day-bar img {
+  position: absolute;
+  left: 42%;
+  top: 23%;
+  width: 2.7%;
+  margin: 0 1.5% 0 0;
+}
+.select-box2 {
+  display: flex;
+  width: 33.5%;
+  flex-direction: column;
+  position: absolute;
+  left: 45%;
+  top: 17%;
+  padding: 0 20px;
+}
+.select-box2 .options-container2 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+.selected2 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 5%;
+  position: relative;
+  order: 0;
+}
+.select-day {
+  position: absolute;
+  top: 35%;
+  left: 13%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected2::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 4.8%;
+  right: 8%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box2 .options-container2.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.89793855042016806) 0%,
+    rgba(255, 255, 255, 0.4660057773109243) 51%,
+    rgba(192, 195, 255, 0.89793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box2 .options-container2::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box2 .options-container2::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box2 .options-container2::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected2 {
+  cursor: pointer;
+}
+
+.select-box2 .option2 {
+  font-family: "GenYoGothic TW";
+  margin: 3.2% 1.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 3.1% 7.4%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  text-decoration: none;
+}
+.option2 input {
+  display: none;
+}
+.hover-off2 {
+  pointer-events: none;
+}
+
+.select-box2 .option2:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box2 label {
+  cursor: pointer;
+}
+
+.select-box2 .option2 .radio2 {
+  display: none;
+}
+.select-box2 .options-container2.active + .selected2::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .day-bar img {
+    position: absolute;
+    left: 7.7%;
+    top: 29%;
+    width: 5%;
+    margin: 0 1.5% 0 0;
+  }
+  .select-box2 {
+    width: 81%;
+    left: 12%;
+    top: 26%;
+  }
+  .select-day {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected2 {
+    height: 43px;
+  }
+  .select-box2 .option2 {
+    font-size: 14px;
+  }
+  .select-box2 .options-container2.active + .selected2::after {
+    top: -15px;
+  }
+  .selected2::after {
+    width: 4%;
+    right: 8.5%;
+  }
+  .select-box2 .options-container2::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+/* select bar 選擇電影 */
+.movie-bar img {
+  margin-top: 2%;
+  position: absolute;
+  left: 3.5%;
+  top: 63%;
+  width: 2.7%;
+  margin: 0 1.5% 0 0;
+}
+.option3 input {
+  display: none;
+}
+.select-box3 {
+  display: flex;
+  width: 33.5%;
+  flex-direction: column;
+  position: absolute;
+  left: 6%;
+  top: 57%;
+  padding: 0 1.5%;
+}
+.select-box3 .options-container3 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+.selected3 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 5%;
+  position: relative;
+  order: 0;
+}
+.select-movie {
+  position: absolute;
+  top: 35%;
+  left: 13%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected3::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 4.8%;
+  right: 8%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box3 .options-container3.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.49793855042016806) 0%,
+    rgba(238, 238, 238, 0.866) 51%,
+    rgba(192, 195, 255, 0.79793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box3 .options-container3::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box3 .options-container3::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box3 .options-container3::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected3 {
+  cursor: pointer;
+}
+
+.select-box3 .option3 {
+  font-family: "GenYoGothic TW";
+  margin: 3.2% 1.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 3.1% 7.4%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.hover-off3 {
+  pointer-events: none;
+}
+
+.select-box3 .option3:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box3 label {
+  cursor: pointer;
+}
+
+.select-box3 .option3 .radio3 {
+  display: none;
+}
+.select-box3 .options-container3.active + .selected3::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .movie-bar img {
+    width: 5%;
+    left: 7.7%;
+    top: 47%;
+  }
+  .select-box3 {
+    width: 75%;
+    left: 15%;
+    top: 44%;
+  }
+  .select-movie {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected3 {
+    height: 43px;
+  }
+  .select-box3 .option3 {
+    font-size: 14px;
+  }
+  .select-box3 .options-container3.active + .selected3::after {
+    top: -15px;
+  }
+  .selected3::after {
+    width: 4%;
+  }
+  .select-box3 .options-container3::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+/* select bar 選擇時間 */
+.time-bar img {
+  position: absolute;
+  left: 41.7%;
+  top: 62%;
+  width: 3.15%;
+  margin: 0 1.5% 0 0;
+}
+.option4 input {
+  display: none;
+}
+.select-box4 {
+  display: flex;
+  width: 33.5%;
+  flex-direction: column;
+  position: absolute;
+  left: 45%;
+  top: 57%;
+  padding: 0 1.5%;
+}
+.select-box4 .options-container4 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+.selected4 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 5%;
+  position: relative;
+  order: 0;
+}
+.select-time {
+  position: absolute;
+  top: 35%;
+  left: 13%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected4::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 4.8%;
+  right: 8%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box4 .options-container4.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.49793855042016806) 0%,
+    rgba(238, 238, 238, 0.866) 51%,
+    rgba(192, 195, 255, 0.79793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box4 .options-container4::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box4 .options-container4::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box4 .options-container4::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected4 {
+  cursor: pointer;
+}
+
+.select-box4 .option4 {
+  font-family: "GenYoGothic TW";
+  margin: 3.2% 1.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 3.1% 7.4%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.hover-off4 {
+  pointer-events: none;
+}
+
+.select-box4 .option4:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box4 label {
+  cursor: pointer;
+}
+
+.select-box4 .option4 .radio4 {
+  display: none;
+}
+.select-box4 .options-container4.active + .selected4::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .time-bar img {
+    width: 5.2%;
+    left: 7.7%;
+    top: 65%;
+  }
+  .select-box4 {
+    width: 75%;
+    left: 15%;
+    top: 62%;
+  }
+  .select-time {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected4 {
+    height: 43px;
+  }
+  .select-box4 .option4 {
+    font-size: 14px;
+  }
+  .select-box4 .options-container4.active + .selected4::after {
+    top: -15px;
+  }
+  .selected4::after {
+    width: 4%;
+  }
+  .select-box4 .options-container4::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+/* 快搜空位 */
+
+/* select bar 選擇地區 */
+.position-bar img {
+  position: absolute;
+  top: 22%;
+  left: 3.3%;
+}
+.select-box5 {
+  display: flex;
+  width: 33.5%;
+  flex-direction: column;
+  position: absolute;
+  left: 6%;
+  top: 17%;
+  padding: 0 1.5%;
+}
+.select-box5 .options-container5 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected5 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 5%;
+  position: relative;
+  order: 0;
+}
+
+.select-position {
+  position: absolute;
+  top: 35%;
+  left: 13%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected5::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 4.8%;
+  right: 8%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box5 .options-container5.active {
+  position: relative;
+  max-height: 600px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box5 .options-container5.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.89793855042016806) 0%,
+    rgba(255, 255, 255, 0.4660057773109243) 51%,
+    rgba(192, 195, 255, 0.89793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box5 .options-container5::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box5 .options-container5::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box5 .options-container5::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected5 {
+  cursor: pointer;
+}
+.select-box5 .option5 {
+  font-family: "GenYoGothic TW";
+  margin: 3.2% 1.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 3.1% 7.4%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+.option5 input {
+  display: none;
+}
+.hover-off5 {
+  pointer-events: none;
+}
+
+.select-box5 .option5:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box5 label {
+  cursor: pointer;
+}
+.select-box5 .options-container5.active + .selected5::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+.select-box5 .option5 .radio5 {
+  display: none;
+}
+@media (max-width: 991px) {
+  .position-bar img {
+    width: 5%;
+    top: 10%;
+    left: 7.5%;
+  }
+  .select-box5 {
+    width: 75%;
+    left: 15%;
+    top: 8%;
+  }
+  .select-position {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected5 {
+    height: 43px;
+  }
+  .select-box5 .option5 {
+    font-size: 14px;
+  }
+  .select-box5 .options-container5.active + .selected5::after {
+    top: -15px;
+  }
+  .selected5::after {
+    width: 4%;
+  }
+  .select-box5 .options-container5::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+/* select bar 選擇日期 */
+.day2-bar img {
+  width: 2.5%;
+  position: absolute;
+  top: 23.5%;
+  left: 41%;
+}
+.select-box6 {
+  display: flex;
+  width: 18%;
+  flex-direction: column;
+  position: absolute;
+  left: 44%;
+  top: 17%;
+  padding: 0 1.5%;
+}
+.select-box6 .options-container6 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected6 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 10.3%;
+  position: relative;
+  order: 0;
+}
+
+.select-day2 {
+  position: absolute;
+  top: 35%;
+  left: 16%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected6::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  right: 13%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box6 .options-container6.active {
+  position: relative;
+  max-height: 600px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box6 .options-container6.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.89793855042016806) 0%,
+    rgba(255, 255, 255, 0.4660057773109243) 51%,
+    rgba(192, 195, 255, 0.89793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box6 .options-container6::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box6 .options-container6::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box6 .options-container6::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected6 {
+  cursor: pointer;
+}
+.select-box6 .option6 {
+  font-family: "GenYoGothic TW";
+  margin: 7.5% 3.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 7% 15.8%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+.option6 input {
+  display: none;
+}
+.hover-off6 {
+  pointer-events: none;
+}
+
+.select-box6 .option6:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box6 label {
+  cursor: pointer;
+}
+
+.select-box6 .option6 .radio6 {
+  display: none;
+}
+.select-box6 .options-container6.active + .selected6::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .day2-bar img {
+    width: 5%;
+    top: 46%;
+    left: 7.8%;
+  }
+  .select-box6 {
+    width: 32%;
+    left: 15%;
+    top: 44%;
+  }
+  .select-day2 {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected6 {
+    height: 43px;
+  }
+  .select-box6 .option6 {
+    font-size: 14px;
+  }
+  .select-box6 .options-container6.active + .selected6::after {
+    top: -15px;
+  }
+  .selected6::after {
+    width: 10%;
+  }
+  .select-box6 .options-container6::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+/* select bar 時間（起） */
+.starttime-bar img {
+  width: 2.5%;
+  position: absolute;
+  top: 23.5%;
+  left: 63%;
+}
+.select-box7 {
+  display: flex;
+  width: 18%;
+  flex-direction: column;
+  position: absolute;
+  left: 66%;
+  top: 17%;
+  padding: 0 1.5%;
+}
+.select-box7 .options-container7 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected7 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 10.3%;
+  position: relative;
+  order: 0;
+}
+
+.select-starttime {
+  position: absolute;
+  top: 35%;
+  left: 16%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected7::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  right: 13%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box7 .options-container7.active {
+  position: relative;
+  max-height: 600px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box7 .options-container7.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.89793855042016806) 0%,
+    rgba(255, 255, 255, 0.4660057773109243) 51%,
+    rgba(192, 195, 255, 0.89793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box7 .options-container7::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box7 .options-container7::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box7 .options-container7::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected7 {
+  cursor: pointer;
+}
+.select-box7 .option7 {
+  font-family: "GenYoGothic TW";
+  margin: 7.5% 3.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 7% 15.8%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+.option7 input {
+  display: none;
+}
+.hover-off7 {
+  pointer-events: none;
+}
+
+.select-box7 .option7:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box7 label {
+  cursor: pointer;
+}
+
+.select-box7 .option7 .radio7 {
+  display: none;
+}
+.select-box7 .options-container7.active + .selected7::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .starttime-bar img {
+    width: 5.2%;
+    top: 65%;
+    left: 7.7%;
+  }
+  .select-box7 {
+    width: 32%;
+    left: 15%;
+    top: 62%;
+  }
+  .select-starttime {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected7 {
+    height: 43px;
+  }
+  .select-box7 .option7 {
+    font-size: 14px;
+  }
+  .select-box7 .options-container7.active + .selected7:after {
+    top: -15px;
+  }
+  .selected7::after {
+    width: 10%;
+  }
+  .select-box7 .options-container7::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .sec-movie-select-box {
+    top: 26%;
+    left: 14.6%;
+  }
+  .sec-movie-select-box img {
+    top: 28%;
+  }
+}
+/* select bar 人數 */
+.people-bar img {
+  width: 2.5%;
+  position: absolute;
+  top: 62%;
+  left: 40.8%;
+}
+.select-box9 {
+  display: flex;
+  width: 18%;
+  flex-direction: column;
+  position: absolute;
+  left: 44%;
+  top: 57%;
+  padding: 0 1.5%;
+}
+.select-box9 .options-container9 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected9 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 10.3%;
+  position: relative;
+  order: 0;
+}
+
+.select-people {
+  position: absolute;
+  top: 35%;
+  left: 16%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected9::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  right: 13%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box9 .options-container9.active {
+  position: relative;
+  max-height: 600px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box9 .options-container9.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.89793855042016806) 0%,
+    rgba(255, 255, 255, 0.4660057773109243) 51%,
+    rgba(192, 195, 255, 0.89793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box9 .options-container9::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box9 .options-container9::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box9 .options-container9::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected9 {
+  cursor: pointer;
+}
+.select-box9 .option9 {
+  font-family: "GenYoGothic TW";
+  margin: 7.5% 3.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 7% 15.8%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+.option9 input {
+  display: none;
+}
+.hover-off9 {
+  pointer-events: none;
+}
+
+.select-box9 .option9:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box9 label {
+  cursor: pointer;
+}
+
+.select-box9 .option9 .radio9 {
+  display: none;
+}
+.select-box9 .options-container9.active + .selected9::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .people-bar img {
+    width: 5%;
+    top: 46.5%;
+    left: 50.7%;
+  }
+  .select-box9 {
+    width: 32%;
+    left: 57%;
+    top: 44%;
+  }
+  .select-people {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected9 {
+    height: 43px;
+  }
+  .select-box9 .option9 {
+    font-size: 14px;
+  }
+  .select-box9 .options-container9.active + .selected9::after {
+    top: -15px;
+  }
+  .selected9::after {
+    width: 10%;
+  }
+  .select-box9 .options-container9::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+/* select bar 時間（止） */
+.endtime-bar img {
+  width: 2.5%;
+  position: absolute;
+  top: 62%;
+  left: 63%;
+}
+.select-box10 {
+  display: flex;
+  width: 18%;
+  flex-direction: column;
+  position: absolute;
+  left: 66%;
+  top: 57%;
+  padding: 0 1.5%;
+}
+.select-box10 .options-container10 {
+  background-color: rgba(45, 45, 45, 1);
+  border: 2px solid #c0c3ff;
+  color: #ffffff;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected10 {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #c0c3ff;
+  margin-bottom: 10.3%;
+  position: relative;
+  order: 0;
+}
+
+.select-endtime {
+  position: absolute;
+  top: 35%;
+  left: 16%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  font-family: "GenYoGothic TW";
+  color: #ffffff;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.selected10::after {
+  content: "";
+  background: url(../img/sankaku.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  right: 13%;
+  top: 43%;
+  transition: all 0.8s;
+}
+
+.select-box10 .options-container10.active {
+  position: relative;
+  max-height: 600px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box10 .options-container10.active {
+  position: relative;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 999;
+  background: linear-gradient(
+    14deg,
+    rgba(192, 195, 255, 0.89793855042016806) 0%,
+    rgba(255, 255, 255, 0.4660057773109243) 51%,
+    rgba(192, 195, 255, 0.89793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+}
+
+.select-box10 .options-container10::-webkit-scrollbar {
+  width: 25px;
+}
+
+.select-box10 .options-container10::-webkit-scrollbar-track {
+  border: solid 18px transparent;
+}
+
+.select-box10 .options-container10::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.3);
+  border-radius: 50px;
+  border: solid 1px rgba(245, 245, 245, 0);
+}
+
+.selected10 {
+  cursor: pointer;
+}
+.select-box10 .option10 {
+  font-family: "GenYoGothic TW";
+  margin: 7.5% 3.3%;
+  font-size: 20px;
+  color: #2d2d2d;
+  font-weight: 400;
+  padding: 7% 15.8%;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+.option10 input {
+  display: none;
+}
+.hover-off10 {
+  pointer-events: none;
+}
+
+.select-box10 .option10:hover {
+  background: #7b78f7;
+  border-radius: 10px;
+}
+.select-box10 label {
+  cursor: pointer;
+}
+
+.select-box10 .option10 .radio10 {
+  display: none;
+}
+.select-box10 .options-container10.active + .selected10::after {
+  transform: rotateX(180deg);
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .endtime-bar img {
+    width: 5.2%;
+    top: 65%;
+    left: 50.5%;
+  }
+  .select-box10 {
+    width: 32%;
+    left: 57%;
+    top: 62%;
+  }
+  .select-endtime {
+    font-size: 14px;
+    top: 25%;
+  }
+  .selected10 {
+    height: 43px;
+  }
+  .select-box10 .option10 {
+    font-size: 14px;
+  }
+  .select-box10 .options-container10.active + .selected10::after {
+    top: -15px;
+  }
+  .selected10::after {
+    width: 10%;
+  }
+  .select-box10 .options-container10::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+#v-pills-profile {
+  position: relative;
+}
+
+/*前往訂票*/
+.button {
+  width: 13.9%;
+  position: absolute;
+  top: 17%;
+  left: 82%;
+}
+/*查看空位*/
+.all-button .seat {
+  top: 56.5%;
+}
+/*快搜空位的訂票按鈕*/
+.buy2 {
+  position: absolute;
+  top: 35%;
+  left: 83.5%;
+  margin: 0%;
+}
+.button a {
+  display: inline-block;
+  width: 100%;
+  font-family: "GenYoGothic TW";
+  font-style: normal;
+  font-size: 140%;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #c0c3ff;
+  border-radius: 35px;
+  padding: 8.3% 22.5%;
+}
+.button a:hover {
+  background-color: #c0c3ff;
+}
+.button a:checked {
+  background-color: #7b78f7;
+}
+@media (max-width: 991px) {
+  .button {
+    width: 30%;
+    position: absolute;
+    top: 80%;
+    left: 16.5%;
+  }
+  .button a {
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .all-button .seat {
+    top: 80%;
+    left: 58%;
+  }
+  .buy2 {
+    left: 35%;
+  }
+}
+/*下半部*/
+
+.accordion {
+  /* width: 90%;
+  margin: auto; */
+  padding: 0 5% 5% 5%;
+  --bs-accordion-color: #ffffff;
+  --bs-accordion-btn-color: #fff;
+  --bs-accordion-bg: linear-gradient(
+    152deg,
+    rgba(255, 255, 255, 0.2528361686471463) 0%,
+    rgba(255, 255, 255, 1) 21%,
+    rgba(255, 255, 255, 0.9139005944174545) 100%
+  );
+  --bs-accordion-active-color: #fff;
+  --bs-accordion-btn-icon: url();
+}
+
+.accordion-button {
+  font-size: 32px;
+  padding: 3.2% 10%;
+  letter-spacing: 2.3px;
+}
+.span0 {
+  width: 60%;
+}
+.span1 {
+  width: 10%;
+  text-align: right;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+.span2 {
+  width: 23%;
+  text-align: right;
+  letter-spacing: 5px;
+}
+/* 公告展開 */
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../img/accordion_icon_active.png);
+  /* width: 2.5%; */
+}
+
+.accordion-button::after {
+  background-image: url(../img/accordion_icon.png);
+  background-size: contain;
+}
+
+.accordion-item {
+  /* background-image: url(./img/accordion_bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.40242034313725494) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 93%
+  );
+  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  backdrop-filter: blur(12.5px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+
+  color: #2d2d2d;
+  font-family: "GenYoGothic TW";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+}
+
+.accordion-body {
+  padding: 0% 10% 3.2% 10%;
+  line-height: 165%;
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.slick-dots li button {
+  display: none;
+}
+
+.footer {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.40242034313725494) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 93%
+  );
+  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  backdrop-filter: blur(12.5px);
+  /* Note: backdrop-filter has minimal browser support */
+  padding: 3% 5%;
+  margin-top: 5%;
+}
+
+.footer-left,
+.footer-mid,
+.footer-right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-left {
+  width: 5%;
+  margin: 0 5%;
+  margin-top: 2%;
+}
+
+.footer-left img {
+  width: 100%;
+  /* margin: auto; */
+}
+
+.footer-mid {
+  width: 55%;
+}
+
+.footer-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+.footer-item {
+  display: inline-block;
+  width: 18%;
+  color: #fff;
+  font-family: "GenYoGothic TW";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+}
+/* .footer-item>p{
+    position: relative;
+} */
+
+.copyright {
+  font-family: "GenYoGothic TW";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 0 0 15%;
+  margin-top: -1%;
+}
+
+.footer-right {
+  width: 25%;
+  text-align: right;
+  /* position: absolute;
+    top: 0; */
+}
+
+.footer-icon {
+  display: inline-block;
+  width: 16%;
+  padding: 0 20px 20px 20px;
+}
+
+.footer-icon img {
+  width: 90%;
+}
+
+.footer-wrapper,
+.footer-right {
+  vertical-align: middle;
+}
+@media (max-width: 576px) {
+  /* 公告 */
+  .accordion {
+    padding: 0 10% 10% 10%;
+  }
+  .accordion-item {
+    font-size: 12px;
+    border-radius: 10px;
+  }
+  .accordion-item:first-of-type {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .span0,
+  .span1 {
+    display: block;
+  }
+  .span0 {
+    width: 58%;
+    font-size: 14px;
+  }
+  .span1 {
+    width: 30%;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+  .span2 {
+    display: none;
+  }
+  /* footer */
+  .footer {
+    padding: 5% 5% 0 5%;
+    margin: 10% 0 0 0;
+  }
+  .footer-mid {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-wrapper,
+  .footer-right {
+    display: block;
+  }
+  .footer-item {
+    font-size: 12px;
+    width: 15%;
+    margin-bottom: 2%;
+  }
+  .footer-left {
+    /* width: 10%;
+    margin: 0; */
+    display: none;
+  }
+  .footer-right {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-icon {
+    width: 10%;
+    padding: 0 1.8%;
+  }
+  .copyright {
+    font-size: 10px;
+    text-align: center;
+    padding: 5% 25%;
+  }
+}
+
+/*@media (max-width: 991px) {
+  .tab-content {
+    display: block;
+    width: 80%;
+  }
+  .button {
+    width: 120px;
+    height: 33px;
+  }
+  .tab-pane select,
+  .button a {
+    font-size: 87.5%;
+    border-radius: 35px;
+    border: 1px solid #c0c3ff;
+  }
+}*/
+/*！！第二頁！！*/
+
+/*電影資訊
+.seat-info {
+  width: 65.6%;
+  display: inline-block;
+  height: 191px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3.59% 17%;
+  padding: 2% 4%;
+}
+.name,
+.sideinfo,
+.info {
+  display: inline-block;
+}
+.name {
+  margin-right: 4.6%;
+  width: 63%;
+  vertical-align: middle;
+}
+.name h1 {
+  font-family: GenYoGothic TW;
+  font-size: 225%;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 6%;
+}
+.name h2 {
+  font-family: GenYoGothic TW;
+  font-size: 200%;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  color: #c0c3ff;
+  margin: 0%;
+}
+.sideinfo {
+  width: 30%;
+  vertical-align: bottom;
+}
+.info {
+  width: 100%;
+  margin: 8% 0 1% 0;
+}
+.info img {
+  margin-right: 8%;
+  vertical-align: middle;
+  width: 8%;
+}
+.info h4 {
+  font-family: GenYoGothic TW;
+  font-size: 125%;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-align: left;
+  vertical-align: middle;
+  color: #eaeaea;
+  width: 80%;
+  display: inline-block;
+  margin: 0%;
+}
+.seat-info a {
+  width: 2.3%;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+.seat-info a img {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .seat-info {
+    width: 80%;
+    margin: 18.3% 10% 9.1% 10%;
+    padding: 3.6% 4.1%;
+  }
+  .seat-info a {
+    width: 3.3%;
+    position: absolute;
+    right: 5%;
+    top: 11%;
+  }
+  .name {
+    width: 97%;
+    margin-right: 0%;
+  }
+  .name h1 {
+    font-size: 118%;
+    margin-bottom: 2%;
+  }
+  .name h2 {
+    font-size: 100%;
+  }
+  .info h4 {
+    font-size: 100%;
+  }
+  .sideinfo {
+    width: 90%;
+  }
+  .info {
+    width: 100%;
+    margin: 3% 0 1% 0;
+  }
+  .info img {
+    margin-right: 6%;
+    width: 5%;
+  }
+}
+/*座位區圖示*/
+/*銀幕位置
+.seat_block {
+  width: 42%;
+  display: inline-block;
+  margin: 0 28%;
+}
+.seat_block h3 {
+  text-align: center;
+  font-family: "GenYoGothic TW";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.25em;
+  color: #c0c3ff;
+  border: 2px solid #c0c3ff;
+  border-radius: 35px;
+  background: none;
+  width: 92%;
+  vertical-align: middle;
+  padding: 2% 0;
+  margin: 0 0% 0.94% 7%;
+}
+/*座位圖
+.seat-pic {
+  width: 100%;
+  margin-bottom: 9.2%;
+}
+.seat-pic img {
+  width: 100%;
+}
+/*座位圖指示
+.seat_instruct {
+  width: 95%;
+  margin-left: 7%;
+  margin-bottom: 13%;
+}
+.instruct {
+  display: inline-block;
+  width: 27%;
+  text-align: center;
+  vertical-align: middle;
+}
+.instruct p {
+  display: inline-block;
+  color: #c0c3ff;
+  font-family: GenYoGothic TW;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.instruct img {
+  width: 16%;
+  margin-right: 8.5%;
+  display: inline-block;
+}
+.long {
+  width: 32%;
+  margin-right: 5%;
+  display: inline-block;
+}
+.long img {
+  width: 10%;
+  display: inline-block;
+}
+.systime {
+  text-align: center;
+  margin: 0 auto;
+  color: #eaeaea;
+  font-family: GenYoGothic TW;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  margin-bottom: 5%;
+}
+@media (max-width: 991px) {
+  .seat_block {
+    width: 70%;
+    margin: 0 15%;
+  }
+  .seat_block h3 {
+    font-size: 62.5%;
+    margin-bottom: 7%;
+  }
+  .instruct p {
+    font-size: 62.5%;
+  }
+  .instruct {
+    width: 21%;
+    margin-left: 4%;
+  }
+  .long {
+    display: inline-block;
+    width: 45%;
+    margin: 0%;
+  }
+  .long img {
+    width: 6.5%;
+  }
+  .systime {
+    font-size: 62.5%;
+    margin-top: 50%;
+    margin-bottom: 20%;
+  }
+}
+
+/*！！第三頁！！*/
+
+/*付款方式
+.choose-payment {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 88.5%;
+  height: 431px;
+  margin: 11% auto 0;
+  padding: 4%;
+}
+.payment {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.payment a {
+  font-family: GenYoGothic TW;
+  font-size: 225%;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  color: #eaeaea;
+  border: #c0c3ff 2px solid;
+  border-radius: 48px;
+  padding: 4% 15%;
+  margin-bottom: 3.2%;
+  display: inline-block;
+}
+.payment a:hover {
+  background-color: #c0c3ff;
+  color: #2d2d2d;
+}
+.payment a:checked {
+  background-color: #7b78f7;
+  color: #2d2d2d;
+}
+.payment h3 {
+  display: inline-block;
+  font-family: GenYoGothic TW;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+  text-align: left;
+  color: #eaeaea;
+  margin: 3.2% 0;
+  text-align: center;
+}
+.payment .purple-word,
+.attention .purple-word {
+  color: #c0c3ff;
+}
+/*說明區
+.three-instruction {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 88.5%;
+  height: 124px;
+  margin: 2.61% auto;
+  padding: 1.35% 10%;
+  text-align: center;
+}
+.ins {
+  width: 30%;
+  text-align: center;
+  display: inline-block;
+}
+.ins a:hover {
+  background-color: #c0c3ff;
+  color: #2d2d2d;
+}
+.ins img {
+  margin-right: 4.6%;
+  display: inline-block;
+  width: 12.2%;
+}
+.ins a {
+  display: inline-block;
+  font-family: GenYoGothic TW;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+  color: #eaeaea;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 2px solid #c0c3ff;
+  border-radius: 48px;
+  padding: 24px 54px;
+}
+/*注意事項
+.attention {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 88.5%;
+  height: 619px;
+  margin: auto;
+  padding: 4.3% 15.5%;
+}
+.attention .purple-word {
+  color: #c0c3ff;
+  font-family: GenYoGothic TW;
+  font-size: 225%;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin-bottom: 4.5%;
+}
+.attention h4 {
+  color: #eaeaea;
+  font-family: GenYoGothic TW;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+.attention .darkpurple-word {
+  color: #3d19cf;
+  margin-top: 3%;
+}
+.copy {
+  color: #eaeaea;
+  font-family: GenYoGothic TW;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  text-align: left;
+  margin: 116px auto;
+  text-align: center;
+}*/

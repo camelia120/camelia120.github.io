@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>威秀影城</title>
+    <link rel="icon" type="image/x-icon" href="../index/img/vieshowlogo.png"/>
+    <link href="./CSS/reset.css" rel="stylesheet" />
+    <link href="./CSS/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <link href="./css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+    <!--navigation-->
+    <div class="navigation">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/whitelogo.png">
+            </a>
+        </div>
+        <div class="menu-wrapper">
+            <div class="menu">
+                <a href="#">會員登入</a>
+            </div>
+            <div class="menu">
+                <a href="#">影城介紹</a>
+            </div>
+            <div class="menu">
+                <a href="#">電影介紹</a>
+            </div>
+            <div class="menu">
+                <a href="#">餐飲商品</a>
+            </div>
+            <div class="menu">
+                <a href="../caution(page1)/caution_page.html">線上訂票</a>
+            </div>
+        </div>
+        
+        <div class="menu burger">
+            <span
+              ><img src="./img/burger.png" />
+              <ul class="submenu">
+                <div class="sub top">
+                  <li><a href="#">會員登入</a></li>
+                  <li><a href="#">聯絡威秀</a></li>
+                  <li><a href="#">常見問題</a></li>
+                  <li><a href="#">會員服務</a></li>
+                </div>
+                <div class="sub">
+                  <li><a href="#">影城介紹</a></li>
+                  <li><a href="#">電影介紹</a></li>
+                  <li><a href="#">映演品牌</a></li>
+                  <li><a href="#">餐飲商品</a></li>
+                </div>
+                <div class="sub">
+                  <li><a href="#">活動公告</a></li>
+                  <li><a href="#">業務專區</a></li>
+                  <li><a href="#">威秀商場</a></li>
+                  <li><a href="#">iShow專區</a></li>
+                </div>
+              </ul>
+            </span>
+          </div>
+        </div>
+    </div>
+    <!-- 電腦版banner -->
+    <div class="banner">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="#">
+              <img src="./img/b4.jpeg" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/b3.jpeg "class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/b2.jpeg" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/b1.png" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/b5.jpeg" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 手機版banner -->
+    <div class="banner mob">
+      <div
+        id="carouselExampleSlidesOnly2"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="#">
+              <img src="./img/m-b4.JPG" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/m-b3.JPG"class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/m-b2.png" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/m-b1.png" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="./img/m-b5.png" class="d-block w-100" alt="..." />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--快速訂票-->
+    <div class="fastbook">
+      <div class="d-flex align-items-start">
+        <div
+          class="nav flex-column nav-pills me-3"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <button
+            class="nav-link active"
+            id="v-pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-home"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+          >
+            快速訂票
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-profile"
+            aria-selected="false"
+          >
+            快搜空位
+          </button>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+          <!--快速訂票內容-->
+          <div
+            class="tab-pane fade show active"
+            id="v-pills-home"
+            role="tabpanel"
+            aria-labelledby="v-pills-home-tab"
+            tabindex="0"
+          >
+            <!-- 選擇影城 -->
+              <div class="theater-bar">
+                <img src="./iconimg/position.png" />
+                <div class="container">
+                  <div class="select-box">
+                    <div class="options-container">
+                        <div class="hover-off">
+                            <div class="option">
+                                <input type="radio" class="radio" id="A" name="category">
+                                <label for="A">請選擇影城</label>
+                            </div>
+                         </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="B" name="category">
+                            <label for="B">台北信義威秀影城</label>
+                        </div>
+      
+                        <div class="option">
+                            <input type="radio" class="radio" id="C" name="category">
+                            <label for="C">MUVIE CINEMAS台北松仁威秀</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="D" name="category">
+                            <label for="D">MUVIE CINEMAS台北松仁威秀(MUCROWN)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="E" name="category">
+                            <label for="E">板橋大遠百威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="F" name="category">
+                            <label for="F">中和環球威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="G" name="category">
+                            <label for="G">林口MITSUI OUTLET PARK威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="H" name="category">
+                            <label for="H">桃園統領威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="I" name="category">
+                            <label for="I">新竹大遠百威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="J" name="category">
+                            <label for="J">新竹巨城威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="K" name="category">
+                            <label for="K">頭份尚順威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="L" name="category">
+                            <label for="L">新竹巨城威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="M" name="category">
+                            <label for="M">台中Tiger City威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="N" name="category">
+                            <label for="N">林口MITSUI OUTLET PARK威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="O" name="category">
+                            <label for="O">台中大魯閣新時代威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="P" name="category">
+                            <label for="P">林口MITSUI OUTLET PARK威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="Q" name="category">
+                            <label for="Q">台南大遠百威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="R" name="category">
+                            <label for="R">台南FOCUS威秀影城(Gold Class)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="S" name="category">
+                            <label for="S">台南南紡威秀影城(Gold Class)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="T" name="category">
+                            <label for="T">高雄大遠百威秀影城</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="U" name="category">
+                            <label for="U">花蓮新天堂樂園威秀影城</label>
+                        </div>
+                    </div>
+    
+                   <div class="selected">
+                    <p class="select-theater">請選擇影城</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 選擇日期 -->
+              <div class="day-bar">
+                <img src="./iconimg/day.png" />
+                <div class="container2">
+                  <div class="select-box2">
+                    <div class="options-container2">
+                        <div class="hover-off2">
+                            <div class="option2">
+                                <input type="radio" class="radio" id="V" name="category">
+                                <label for="V">請選擇日期</label>
+                            </div>
+                         </div>
+                        <div class="option2">
+                            <input type="radio" class="radio" id="W" name="category">
+                            <label for="W">今天</label>
+                        </div>
+                        <div class="option2">
+                            <input type="radio" class="radio" id="X" name="category">
+                            <label for="X">2023/1/15</label>
+                        </div>
+                        <div class="option2">
+                            <input type="radio" class="radio" id="Y" name="category">
+                            <label for="Y">2023/1/16</label>
+                        </div>
+                        <div class="option2">
+                            <input type="radio" class="radio" id="Z" name="category">
+                            <label for="Z">2023/1/17</label>
+                        </div>
+                      </div>
+    
+                   <div class="selected2">
+                    <p class="select-day">請選擇日期</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 選擇電影 -->
+              <div class="movie-bar">
+                <img src="./iconimg/video.png" />
+                <div class="container3">
+                  <div class="select-box3">
+                    <div class="options-container3">
+                        <div class="hover-off3">
+                            <div class="option3">
+                                <input type="radio" class="radio" id="a" name="category">
+                                <label for="a">請選擇電影</label>
+                            </div>
+                         </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="b" name="category">
+                            <label for="b">(數位)黑豹2：瓦干達萬歲</label>
+                        </div>
+      
+                        <div class="option3">
+                            <input type="radio" class="radio" id="c" name="category">
+                            <label for="c">(4DX)黑豹2：瓦干達萬歲</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="d" name="category">
+                            <label for="d">(4DX 3D)黑豹2：瓦干達萬歲</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="e" name="category">
+                            <label for="e">(LIVE)筑子累累</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="f" name="category">
+                            <label for="f">(數位)流麻溝十五號</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="g" name="category">
+                            <label for="g">(數位)流浪之月</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="h" name="category">
+                            <label for="h">(數位)調職令是警察樂隊</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="i" name="category">
+                            <label for="i">(修復影靈）影靈想睡覺</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="j" name="category">
+                            <label for="j">(數位)逃出風暴</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="k" name="category">
+                            <label for="k">(4DX)伊鞠萌萌</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="l" name="category">
+                            <label for="l">(數位)信用詐欺師JP：英雄篇</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="m" name="category">
+                            <label for="m">(數位)罪後真相</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="n" name="category">
+                            <label for="n">(數位)犬王</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="o" name="category">
+                            <label for="o">(數位)黑亞當</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="p" name="category">
+                            <label for="p">(4DX)黑亞當</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="q" name="category">
+                            <label for="q">(數位)你在我心上</label>
+                        </div>
+                    </div>
+    
+                   <div class="selected3">
+                    <p class="select-movie">請選擇電影</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 選擇時間 -->
+              <div class="time-bar">
+                <img src="./iconimg/time.png" />
+                <div class="container4">
+                  <div class="select-box4">
+                    <div class="options-container4">
+                        <div class="hover-off4">
+                            <div class="option4">
+                                <input type="radio" class="radio" id="r" name="category">
+                                <label for="r">請選擇時間</label>
+                            </div>
+                         </div>
+                        <div class="option4">
+                            <input type="radio" class="radio" id="s" name="category">
+                            <label for="s">09:30</label>
+                        </div>
+                        <div class="option4">
+                            <input type="radio" class="radio" id="t" name="category">
+                            <label for="t">11:00</label>
+                        </div>
+                        <div class="option4">
+                            <input type="radio" class="radio" id="u" name="category">
+                            <label for="u">13:30</label>
+                        </div>
+                        <div class="option4">
+                            <input type="radio" class="radio" id="v" name="category">
+                            <label for="v">18:00</label>
+                        </div>
+                        <div class="option4">
+                            <input type="radio" class="radio" id="w" name="category">
+                            <label for="w">21:00</label>
+                        </div>
+                      </div>
+    
+                   <div class="selected4">
+                    <p class="select-time">請選擇時間</p>
+                   </div>
+                  </div>
+                </div>
+              </div> 
+              <!-- 前往訂票按鈕 -->
+              <div class="all-button">
+              <div class="button buy">
+                <a href="#">前往訂票</a>
+              </div>
+              <div class="button seat">
+                <a href="#">查看座位</a>
+              </div>
+            </div>
+          
+            
+          </div>
+            
+        
+          <!--快搜空位內容-->
+          <div
+            class="tab-pane fade"
+            id="v-pills-profile"
+            role="tabpanel"
+            aria-labelledby="v-pills-profile-tab"
+            tabindex="0"
+          >
+            <!-- 選擇地區 -->
+            <div class="position-bar">
+                <img src="./iconimg/position.png" />
+                <div class="container5">
+                  <div class="select-box5">
+                    <div class="options-container5">
+                        <div class="hover-off5">
+                            <div class="option5">
+                                <input type="radio" class="radio" id="AA" name="category">
+                                <label for="AA">請選擇地區</label>
+                            </div>
+                         </div>
+                        <div class="option5">
+                            <input type="radio" class="radio" id="BB" name="category">
+                            <label for="BB">雙北</label>
+                        </div>
+                        <div class="option5">
+                            <input type="radio" class="radio" id="CC" name="category">
+                            <label for="CC">桃竹苗</label>
+                        </div>
+                        <div class="option5">
+                            <input type="radio" class="radio" id="DD" name="category">
+                            <label for="DD">中部</label>
+                        </div>
+                        <div class="option5">
+                            <input type="radio" class="radio" id="EE" name="category">
+                            <label for="EE">南部</label>
+                        </div>
+                        <div class="option5">
+                            <input type="radio" class="radio" id="FF" name="category">
+                            <label for="FF">中部</label>
+                        </div>
+                      </div>
+    
+                   <div class="selected5">
+                    <p class="select-position">請選擇地區</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 選擇日期 -->
+              <div class="day2-bar">
+                <img src="./iconimg/day.png" />
+                <div class="container6">
+                  <div class="select-box6">
+                    <div class="options-container6">
+                        <div class="hover-off6">
+                            <div class="option6">
+                                <input type="radio" class="radio" id="GG" name="category">
+                                <label for="GG">日期</label>
+                            </div>
+                         </div>
+                        <div class="option6">
+                            <input type="radio" class="radio" id="HH" name="category">
+                            <label for="HH">今天</label>
+                        </div>
+                        <div class="option6">
+                            <input type="radio" class="radio" id="II" name="category">
+                            <label for="II">2023/1/10</label>
+                        </div>
+                        <div class="option6">
+                            <input type="radio" class="radio" id="JJ" name="category">
+                            <label for="JJ">2023/1/12</label>
+                        </div>
+                        <div class="option6">
+                            <input type="radio" class="radio" id="KK" name="category">
+                            <label for="KK">2023/1/13</label>
+                        </div>
+                        <div class="option6">
+                            <input type="radio" class="radio" id="LL" name="category">
+                            <label for="LL">2023/1/15</label>
+                        </div>
+                      </div>
+    
+                   <div class="selected6">
+                    <p class="select-day2">日期</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 時間（起） -->
+              <div class="starttime-bar">
+                <img src="./iconimg/time.png" />
+                <div class="container7">
+                  <div class="select-box7">
+                    <div class="options-container7">
+                        <div class="hover-off7">
+                            <div class="option7">
+                                <input type="radio" class="radio" id="MM" name="category">
+                                <label for="MM">時間(起)</label>
+                            </div>
+                         </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="NN" name="category">
+                            <label for="NN">06:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="OO" name="category">
+                            <label for="OO">07:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="PP" name="category">
+                            <label for="PP">08:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="QQ" name="category">
+                            <label for="QQ">09:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="RR" name="category">
+                            <label for="RR">10:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="SS" name="category">
+                            <label for="SS">11:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="TT" name="category">
+                            <label for="TT">12:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="UU" name="category">
+                            <label for="UU">01:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="VV" name="category">
+                            <label for="VV">02:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="WW" name="category">
+                            <label for="WW">03:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="XX" name="category">
+                            <label for="XX">04:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="YY" name="category">
+                            <label for="YY">05:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="ZZ" name="category">
+                            <label for="ZZ">06:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="AAA" name="category">
+                            <label for="AAA">07:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="BBB" name="category">
+                            <label for="BBB">08:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="CCC" name="category">
+                            <label for="CCC">09:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="DDD" name="category">
+                            <label for="DDD">10:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="EEE" name="category">
+                            <label for="EEE">11:00PM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="FFF" name="category">
+                            <label for="FFF">12:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="GGG" name="category">
+                            <label for="GGG">01:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="HHH" name="category">
+                            <label for="HHH">02:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="III" name="category">
+                            <label for="III">03:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="JJJ" name="category">
+                            <label for="JJJ">04:00AM</label>
+                        </div>
+                        <div class="option7">
+                            <input type="radio" class="radio" id="KKK" name="category">
+                            <label for="KKK">05:00AM</label>
+                        </div>
+                      </div>
+                   <div class="selected7">
+                    <p class="select-starttime">時間(起)</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 選擇電影 -->
+              <div class="movie-bar sec-movie-select-box">
+                <img src="./iconimg/video.png" />
+                <div class="container3 ">
+                  <div class="select-box3 sec-movie-select-box">
+                    <div class="options-container3 sec-movie">
+                        <div class="hover-off3 ">
+                            <div class="option3 ">
+                                <input type="radio" class="radio" id="a" name="category">
+                                <label for="a">請選擇電影</label>
+                            </div>
+                         </div>
+                        <div class="option3 ">
+                            <input type="radio" class="radio" id="b" name="category">
+                            <label for="b">(數位)黑豹2：瓦干達萬歲</label>
+                        </div>
+      
+                        <div class="option3 ">
+                            <input type="radio" class="radio" id="c" name="category">
+                            <label for="c">(4DX)黑豹2：瓦干達萬歲</label>
+                        </div>
+                        <div class="option3 ">
+                            <input type="radio" class="radio" id="d" name="category">
+                            <label for="d">(4DX 3D)黑豹2：瓦干達萬歲</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="e" name="category">
+                            <label for="e">(LIVE)筑子累累</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="f" name="category">
+                            <label for="f">(數位)流麻溝十五號</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="g" name="category">
+                            <label for="g">(數位)流浪之月</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="h" name="category">
+                            <label for="h">(數位)調職令是警察樂隊</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="i" name="category">
+                            <label for="i">(修復影靈）影靈想睡覺</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="j" name="category">
+                            <label for="j">(數位)逃出風暴</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="k" name="category">
+                            <label for="k">(4DX)伊鞠萌萌</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="l" name="category">
+                            <label for="l">(數位)信用詐欺師JP：英雄篇</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="m" name="category">
+                            <label for="m">(數位)罪後真相</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="n" name="category">
+                            <label for="n">(數位)犬王</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="o" name="category">
+                            <label for="o">(數位)黑亞當</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="p" name="category">
+                            <label for="p">(4DX)黑亞當</label>
+                        </div>
+                        <div class="option3">
+                            <input type="radio" class="radio" id="q" name="category">
+                            <label for="q">(數位)你在我心上</label>
+                        </div>
+                    </div>
+    
+                   <div class="selected3">
+                    <p class="select-movie">請選擇電影</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+             <!-- 人數 -->
+             <div class="people-bar">
+                <img src="./iconimg/person.png" />
+                <div class="container9">
+                  <div class="select-box9">
+                    <div class="options-container9">
+                        <div class="hover-off9">
+                            <div class="option9">
+                                <input type="radio" class="radio" id="LLL" name="category">
+                                <label for="LLL">人數</label>
+                            </div>
+                         </div>
+                        <div class="option9">
+                            <input type="radio" class="radio" id="MMM" name="category">
+                            <label for="MMM">1</label>
+                        </div>
+                        <div class="option9">
+                            <input type="radio" class="radio" id="NNN" name="category">
+                            <label for="NNN">2</label>
+                        </div>
+                        <div class="option9">
+                            <input type="radio" class="radio" id="OOO" name="category">
+                            <label for="OOO">3</label>
+                        </div>
+                        <div class="option9">
+                            <input type="radio" class="radio" id="PPP" name="category">
+                            <label for="PPP">4</label>
+                        </div>
+                        <div class="option9">
+                            <input type="radio" class="radio" id="QQQ" name="category">
+                            <label for="QQQ">5</label>
+                        </div>
+                        <div class="option9">
+                            <input type="radio" class="radio" id="RRR" name="category">
+                            <label for="RRR">6</label>
+                        </div>
+                      </div>
+                   <div class="selected9">
+                    <p class="select-people">人數</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 時間（止） -->
+              <div class="endtime-bar">
+                <img src="./iconimg/time.png" />
+                <div class="container10">
+                  <div class="select-box10">
+                    <div class="options-container10">
+                        <div class="hover-off10">
+                            <div class="option10">
+                                <input type="radio" class="radio" id="SSS" name="category">
+                                <label for="SSS">時間(止)</label>
+                            </div>
+                         </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="TTT" name="category">
+                            <label for="TTT">06:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="UUU" name="category">
+                            <label for="UUU">07:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="VVV" name="category">
+                            <label for="VVV">08:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="WWW" name="category">
+                            <label for="WWW">09:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="XXX" name="category">
+                            <label for="XXX">10:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="YYY" name="category">
+                            <label for="YYY">11:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="ZZZ" name="category">
+                            <label for="ZZZ">12:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="aa" name="category">
+                            <label for="aa">01:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="bb" name="category">
+                            <label for="bb">02:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="cc" name="category">
+                            <label for="cc">03:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="dd" name="category">
+                            <label for="dd">04:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="ee" name="category">
+                            <label for="ee">05:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="ff" name="category">
+                            <label for="ff">06:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="gg" name="category">
+                            <label for="gg">07:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="hh" name="category">
+                            <label for="hh">08:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="ii" name="category">
+                            <label for="ii">09:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="jj" name="category">
+                            <label for="jj">10:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="kk" name="category">
+                            <label for="kk">11:00PM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="ll" name="category">
+                            <label for="ll">12:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="mm" name="category">
+                            <label for="mm">01:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="nn" name="category">
+                            <label for="nn">02:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="oo" name="category">
+                            <label for="oo">03:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="pp" name="category">
+                            <label for="pp">04:00AM</label>
+                        </div>
+                        <div class="option10">
+                            <input type="radio" class="radio" id="qq" name="category">
+                            <label for="qq">05:00AM</label>
+                        </div>
+                      </div>
+                   <div class="selected10">
+                    <p class="select-endtime">時間(止)</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 前往訂票button -->
+              <div class="button buy2">
+                <a href="#">前往訂票</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 下半部 -->
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <span class="span0">台南Focus威秀影城營運公告</span>
+            <span class="span1">2022/10/13</span>
+            <span class="span2">Learn More</span>
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            台南Focus威秀影城先前因設備故障暫停營業，確認於10/16日中午起恢復營業。<br />
+            <br />
+            ●官方網路平台訂票尚未取票者，可直接在網路上取消訂票<br />
+            （線上退票不會收取手續費）<br />
+            <br />
+            ●現場購票、網路訂票已取票取餐者、超過線上退票兩小時規定者，<br />
+            可持未使用之電影票於14日內至台南Focus影城現進行退款事宜。<br />
+            <br />
+            造成不便敬請見諒，威秀影城感謝您的配合，祝您順心!!<br />
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <span class="span0">防疫升級!!安心觀影!!</span>
+            <span class="span1">2022/04/27</span>
+            <span class="span2">Learn More</span>
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            影城防疫重點措施<br />
+            <br />
+            ●實行影城人員健康管理監測；防疫篩檢與分流上班計畫。<br />
+            ●環境消毒：執行影廳及公共區域定時消毒。<br />
+            ●執行三明治售票消毒流程：服務期間皆使用酒精消毒。<br />
+            ●配合商場體溫監控管理及使用酒精消毒。<br />
+            ●飲食期間除外，影城內敬請全程配戴口罩。<br />
+            <br />
+            鼓勵下載臺灣社交距離APP<br />
+            威秀影城與您一同防疫
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            <span class="span0">團體優待票履約展延公告</span>
+            <span class="span1">2022/09/21</span>
+            <span class="span2">Learn More</span>
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            2021/08/02起所販售之團體電影優待票<br />
+            已向星展銀行展延履約<br />
+            保證期限至2022/12/31止<br />
+            優惠期限亦至2022/12/31止<br />
+            <br />
+            銷售日期與履約截止日<br />
+            可上威秀影城官方網站查詢:業務專區→禮券查詢
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFour"
+            aria-expanded="false"
+            aria-controls="collapseFour"
+          >
+            <span class="span0">疫情期間-LIVE演唱會直播-安心應援須知</span>
+            <span class="span1">2022/08/27</span>
+            <span class="span2">Learn More</span>
+          </button>
+        </h2>
+        <div
+          id="collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingFour"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            威秀影城零秒差直播<br />
+            安心應援須知<br />
+            <br />
+            ●請全程配戴口罩並遵守影城現場防疫規範。<br />
+            ●觀賞期間請勿站立、離開座位、阻擋走或影廳動線，任何影響他人進出及場內安全之行為皆被禁止。<br />
+            ●觀賞期間，請揮舞手燈應援代替呐喊口號，避免有口沫噴濺疑慮。請使用官方手燈或一般市售螢光棒，若有其他影響安全或發出噪音干擾之器具，禁止攜帶入場。<br />
+            ●觀賞期間請勿過度喧嘩，請配合於活動過程中有劇烈俯仰晃動，過度跳躍等干擾鄰座之行為。<br />
+            ●若發現嚴重擾亂現場秩序之行為，請向影城工作人員反應。無法聽從工作人員指示者，將強制驅離影廳，不會退還任何票款。敬請配合與見諒。<br />
+            <br />
+            保護你我健康維護安心觀賞空間，期待未來更多精采節目都能為您實現！
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFive"
+            aria-expanded="false"
+            aria-controls="collapseFive"
+          >
+            <span class="span0">退費服務異動公告</span>
+            <span class="span1">2022/12/25</span>
+            <span class="span2">Learn More</span>
+          </button>
+        </h2>
+        <div
+          id="collapseFive"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingFive"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            因應2021年商品(服務)禮券定型化契約新規定<br />
+            自2021年1月1日起之儲值或購買,<br />
+            將調整以下服務內容:<br />
+            <br />
+            申請儲值金退費、申請團體票與經濟/豪華餐券退費<br />
+            將酌收 3%手續費<br />
+            <br />
+            詳細規則請見官網iShow專區卡友權益及業務專區<br />
+            威秀影城感謝您的支持
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 輪播 -->
+    <div class="container">
+      <div class="wrapper">
+        <div id="cover">
+          <div>
+            <img src="./img/ad_1.png" />
+          </div>
+          <div>
+            <img src="./img/ad_2.png" />
+          </div>
+          <div>
+            <img src="./img/ad_3.png" />
+          </div>
+          <div>
+            <img src="./img/ad_4.png" />
+          </div>
+          <div>
+            <img src="./img/ad_5.png" />
+          </div>
+          <div>
+            <img src="./img/ad_6.png" />
+          </div>
+          <div>
+            <img src="./img/ad_7.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-left">
+        <img src="./img/Authenticated_web.png" />
+      </div>
+      <div class="footer-mid">
+        <div class="footer-wrapper">
+          <div class="footer-item">
+            <p>關於威秀</p>
+          </div>
+          <div class="footer-item">
+            <p>人才招募</p>
+          </div>
+          <div class="footer-item">
+            <p>電子發票</p>
+          </div>
+          <div class="footer-item">
+            <p>隱私權政策</p>
+          </div>
+          <div class="footer-item">
+            <p>網站地圖</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-icon">
+          <img src="./img/FB.png" />
+        </div>
+        <div class="footer-icon">
+          <img src="./img/LINE.png" />
+        </div>
+        <div class="footer-icon">
+          <img src="./img/YT.png" />
+        </div>
+        <div class="footer-icon">
+          <img src="./img/IG.png" />
+        </div>
+      </div>
+      <div class="copyright">
+          <p>
+            Copyright ©️ 2016 威秀影城 VIESHOW Cinemas. All Rights Reserved.
+          </p>
+        </div>
+    </div>
+  
+
+
+    <script
+      src="../index/bootstrap.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../index/jquery.js"></script>
+    <script src="../index/main.js"></script>
+
+    <!-- 下半部引用 -->
+    <script src="./jquery-3.6.1.min.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="./slick/slick.js"></script>
+    <script src="./slick/slick.js"></script>
+    <script>
+      $("#cover").slick({
+        slidesToShow: 3, //每個輪播有幾張圖片
+        dots: true,
+        centerMode: true,
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
+      });
+    </script>
+  </body>
+</html>
