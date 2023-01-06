@@ -1,0 +1,167 @@
+/*navigation*/
+.navigation {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  /*background-image: url(../img/menu.png);*/
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(14px);
+  width: 100vw;
+  padding: 2.75% 5%;
+}
+.logo {
+  display: inline-block;
+  width: 17.35%;
+}
+.logo img {
+  width: 100%;
+}
+/*nav選項*/
+.menu-wrapper {
+  display: inline-block;
+  width: 78%;
+  vertical-align: middle;
+  padding-left: 30%;
+}
+.menu a:hover {
+  color: #c0c3ff;
+}
+.menu {
+  display: inline-block;
+  width: 19.3%;
+}
+.menu a {
+  vertical-align: middle;
+  font-family: "GenYoGothic TW";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 140%;
+  color: #ffffff;
+  text-decoration: none;
+}
+/*漢堡選單*/
+.burger {
+  display: inline-block;
+  width: 3%;
+  position: relative;
+}
+.burger img {
+  width: 100%;
+}
+.burger span {
+  cursor: pointer;
+}
+.submenu.dropdown {
+  display: block;
+}
+/*css animation*/
+@keyframes slide {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 400%;
+  }
+}
+.sub .m-ticket {
+  display: none;
+}
+.submenu {
+  position: fixed;
+  display: none;
+  background-color: #383838;
+  opacity: 90%;
+  backdrop-filter: blur(14px);
+  width: 100vw;
+  left: 0;
+  top: 100%;
+  height: 400%;
+  padding: 0%;
+  animation: slide 0.4s;
+}
+.submenu .dropdown {
+  width: 100%;
+}
+.sub {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  margin: 2.2% 20%;
+}
+.top {
+  border-bottom: #ffffff solid 1px;
+  margin-top: 6.2%;
+}
+.sub li {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+.top li {
+  margin-bottom: 5.2%;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-image: url(../img/menu.png);
+  backdrop-filter: blur(14px);
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .navigation {
+    padding: 4% 5%;
+  }
+  .menu-wrapper {
+    display: none;
+  }
+  .logo {
+    margin-left: 34.5%;
+    width: 30%;
+  }
+  .burger {
+    margin-left: 20%;
+    width: 6%;
+  }
+
+  .sub {
+    display: block;
+    border: 0;
+    margin: 2.2% 40%;
+  }
+  .m-ticket {
+    display: block;
+  }
+  .sub li {
+    width: 40%;
+    display: block;
+    text-align: center;
+    margin-bottom: 5.2%;
+  }
+  .sub a {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .submenu {
+    height: 860%;
+    animation: slide 0.5s;
+    padding-top: 6%;
+  }
+  @keyframes slide {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 860%;
+    }
+  }
+}

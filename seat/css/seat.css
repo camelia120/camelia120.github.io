@@ -1,0 +1,374 @@
+body {
+  background-color: #2d2d2d;
+  background-image: url(../img/purpleblur.png);
+  width: 100%;
+}
+/*泡泡動畫*/
+@keyframes updown {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 60%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes updown2 {
+  0% {
+    top: 20%;
+    left: 60%;
+  }
+  50% {
+    top: 0;
+    background-color: #7b78f7;
+  }
+  100% {
+    top: 20%;
+    left: 60%;
+  }
+}
+@keyframes updown3 {
+  0% {
+    top: 90%;
+    left: 50%;
+  }
+  50% {
+    top: 10%;
+    background-color: #7b78f7;
+  }
+  100% {
+    top: 90%;
+    left: 50%;
+  }
+}
+
+@keyframes leftright {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes leftright2 {
+  0% {
+    left: 70%;
+    top: 5%;
+  }
+  50% {
+    left: 20%;
+    top: 40%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    top: 5%;
+    left: 70%;
+  }
+}
+@keyframes leftright3 {
+  0% {
+    left: 30%;
+  }
+  50% {
+    left: 0%;
+    background-color: #c0c3ff;
+  }
+  100% {
+    left: 30%;
+  }
+}
+
+@keyframes vastag {
+  0% {
+    width: 8vh;
+  }
+  50% {
+    width: 32vh;
+    background-color: #3d19cf;
+    opacity: 40%;
+  }
+  100% {
+    width: 8vh;
+  }
+}
+
+@keyframes forog {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.background {
+  width: 100%;
+  position: fixed;
+}
+.bubble {
+  height: 40vh;
+  border-radius: 80%;
+  background: #3d19cf;
+  position: absolute;
+  filter: blur(10vh);
+  animation: updown linear 32s infinite, leftright ease-in-out 23s infinite,
+    vastag linear 20s infinite, forog linear 31s infinite;
+}
+.bubble:nth-child(2) {
+  animation: updown ease-in 20s infinite, leftright ease-in-out 30s infinite,
+    vastag linear 23s infinite, forog linear 25s infinite;
+}
+.bubble:nth-child(3) {
+  animation: updown2 ease-out 35s infinite, leftright2 ease-in-out 25s infinite,
+    vastag linear 29s infinite, forog linear 23s infinite;
+}
+.bubble:nth-child(4) {
+  animation: updown3 ease-in-out 25s infinite,
+    leftright3 ease-in-out 29s infinite, vastag linear 31s infinite,
+    forog linear 21s infinite;
+}
+.bubble:nth-child(5) {
+  animation: updown2 ease-in-out 22s infinite,
+    leftright2 ease-in-out 31s infinite, vastag linear 35s infinite,
+    forog linear 30s infinite;
+}
+.bubble:nth-child(6) {
+  animation: updown ease-in-out 19s infinite, leftright ease-in-out 20s infinite,
+    vastag linear 25s infinite, forog linear 30s infinite;
+}
+.bubble:last-child {
+  animation: updown3 linear 33s infinite, leftright3 ease-in-out 28s infinite,
+    vastag linear 19s infinite, forog linear 32s infinite;
+}
+
+/*電影資訊*/
+.seat-info {
+  width: 65.6%;
+  display: inline-block;
+  height: 191px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.19793855042016806) 0%,
+    rgba(255, 255, 255, 0.3660057773109243) 51%,
+    rgba(255, 255, 255, 0.19793855042016806) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3.59% 17%;
+  padding: 2% 4%;
+}
+.name,
+.sideinfo,
+.info {
+  display: inline-block;
+}
+.name {
+  margin-right: 4.6%;
+  width: 63%;
+  vertical-align: middle;
+}
+.name h1 {
+  font-family: GenYoGothic TW;
+  font-size: 225%;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 6%;
+}
+.name h2 {
+  font-family: GenYoGothic TW;
+  font-size: 200%;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  color: #c0c3ff;
+  margin: 0%;
+}
+.sideinfo {
+  width: 30%;
+  vertical-align: bottom;
+}
+.info {
+  width: 100%;
+  margin: 8% 0 1% 0;
+}
+.info img {
+  margin-right: 8%;
+  vertical-align: middle;
+  width: 8%;
+}
+.info h4 {
+  font-family: GenYoGothic TW;
+  font-size: 125%;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-align: left;
+  vertical-align: middle;
+  color: #eaeaea;
+  width: 80%;
+  display: inline-block;
+  margin: 0%;
+}
+.seat-info a {
+  width: 2.3%;
+  position: absolute;
+  right: 5%;
+  top: 21%;
+}
+.seat-info a img {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .seat-info {
+    width: 80%;
+    margin: 18.3% 10% 9.1% 10%;
+    padding: 3.6% 4.1%;
+  }
+  .seat-info a {
+    width: 3.3%;
+    position: absolute;
+    right: 5%;
+    top: 11%;
+  }
+  .name {
+    width: 97%;
+    margin-right: 0%;
+  }
+  .name h1 {
+    font-size: 118%;
+    margin-bottom: 2%;
+  }
+  .name h2 {
+    font-size: 100%;
+  }
+  .info h4 {
+    font-size: 100%;
+  }
+  .sideinfo {
+    width: 90%;
+  }
+  .info {
+    width: 100%;
+    margin: 3% 0 1% 0;
+  }
+  .info img {
+    margin-right: 6%;
+    width: 5%;
+  }
+}
+/*座位區圖示*/
+/*銀幕位置*/
+.seat_block {
+  width: 42%;
+  display: inline-block;
+  margin: 0 28%;
+}
+.seat_block h3 {
+  text-align: center;
+  font-family: "GenYoGothic TW";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.25em;
+  color: #c0c3ff;
+  border: 2px solid #c0c3ff;
+  border-radius: 35px;
+  background: none;
+  width: 92%;
+  vertical-align: middle;
+  padding: 2% 0;
+  margin: 0 0% 0.94% 7%;
+}
+/*座位圖*/
+.seat-pic {
+  width: 100%;
+  margin-bottom: 9.2%;
+}
+.seat-pic img {
+  width: 100%;
+}
+/*座位圖指示*/
+.seat_instruct {
+  width: 95%;
+  margin-left: 7%;
+  margin-bottom: 13%;
+}
+.instruct {
+  display: inline-block;
+  width: 27%;
+  text-align: center;
+  vertical-align: middle;
+}
+.instruct p {
+  display: inline-block;
+  color: #c0c3ff;
+  font-family: GenYoGothic TW;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.instruct img {
+  width: 16%;
+  margin-right: 8.5%;
+  display: inline-block;
+}
+.long {
+  width: 32%;
+  margin-right: 5%;
+  display: inline-block;
+}
+.long img {
+  width: 10%;
+  display: inline-block;
+}
+.systime {
+  text-align: center;
+  margin: 0 auto;
+  color: #eaeaea;
+  font-family: GenYoGothic TW;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  margin-bottom: 5%;
+}
+@media (max-width: 991px) {
+  .seat_block {
+    width: 70%;
+    margin: 0 15%;
+  }
+  .seat_block h3 {
+    font-size: 62.5%;
+    margin-bottom: 7%;
+  }
+  .instruct p {
+    font-size: 62.5%;
+  }
+  .instruct {
+    width: 21%;
+    margin-left: 4%;
+  }
+  .long {
+    display: inline-block;
+    width: 45%;
+    margin: 0%;
+  }
+  .long img {
+    width: 6.5%;
+  }
+  .systime {
+    font-size: 62.5%;
+    margin-top: 50%;
+    margin-bottom: 20%;
+  }
+}
