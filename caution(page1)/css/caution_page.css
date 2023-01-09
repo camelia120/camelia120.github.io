@@ -491,6 +491,12 @@ body {
 }
 /* select bar 影片 */
 
+/* @media screen and (max-width: 390px) {
+  .select-theater,
+  .select-movie {
+    top: 10%;
+  }
+} */
 @media screen and (max-width: 576px) {
   .wrapper {
     max-width: 80%;

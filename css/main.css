@@ -2064,10 +2064,10 @@ body {
 }
 @media (max-width: 991px) {
   .button {
-    width: 30%;
+    width: 35%;
     position: absolute;
     top: 80%;
-    left: 16.5%;
+    left: 13%;
   }
   .button a {
     font-size: 14px;
@@ -2312,5 +2312,10 @@ body {
     font-size: 8px;
     text-align: center;
     padding: 5% 25%;
+  }
+}
+@media (max-width: 390px) {
+  .span1 {
+    width: 15%;
   }
 }
