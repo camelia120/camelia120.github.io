@@ -152,7 +152,6 @@ body {
   position: fixed;
   top: 0;
   z-index: 999;
-  /*background-image: url(../img/menu.png);*/
   background: rgb(255, 255, 255);
   background: linear-gradient(
     137deg,
@@ -329,8 +328,6 @@ body {
 }
 /* 中間btn*3 */
 .mid {
-  /* background-image: url(./img/p6_mid_bg.png);
-  background-repeat: no-repeat; */
   background: rgb(255, 255, 255);
   background: linear-gradient(
     137deg,
@@ -338,14 +335,10 @@ body {
     rgba(255, 255, 255, 0.40242034313725494) 51%,
     rgba(255, 255, 255, 0.19793855042016806) 93%
   );
-  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
   backdrop-filter: blur(12.5px);
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 20px;
   width: 90%;
   margin: auto;
-  /* background-size: cover;
-  background-repeat: no-repeat; */
   padding: 1.35% 15%;
 }
 .mid-item {
@@ -374,7 +367,6 @@ body {
   border-radius: 48px;
   padding: 10% 18%;
   cursor: pointer;
-  /* margin: 0 18px; */
   color: #fff;
   font-family: "GenYoGothic TW";
   font-weight: 400;
@@ -384,14 +376,12 @@ body {
   letter-spacing: 0.15em;
 }
 .mid-button button:hover {
-  /* width: 70%; */
   background-color: #c0c3ff;
   border-radius: 48px;
   color: #2d2d2d;
 }
 /* 訂票規定區塊 */
 .main {
-  /* background-image: url(./img/p6_main_bg.png); */
   width: 90%;
   margin: 2.61% auto;
   background: rgb(255, 255, 255);
@@ -401,9 +391,7 @@ body {
     rgba(255, 255, 255, 0.40242034313725494) 51%,
     rgba(255, 255, 255, 0.19793855042016806) 93%
   );
-  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
   backdrop-filter: blur(12.5px);
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 20px;
 }
 h1 {
@@ -429,7 +417,6 @@ h1 {
   background-image: url(../img/check_bubble.png);
   background-repeat: no-repeat;
   background-position: center;
-  /* padding: 7%; */
   margin: 7% 10.3% 0 7%;
 }
 .check_bubble p {
@@ -482,7 +469,6 @@ input[type="checkbox"]:checked + span {
   border-radius: 48px;
   padding: 8% 15%;
   cursor: pointer;
-  /* margin: 0 50%; */
   color: #fff;
   font-size: 20px;
   font-weight: 550;
@@ -500,7 +486,6 @@ input[type="checkbox"]:checked + span {
   border-radius: 75px;
   padding: 10% 15%;
   cursor: pointer;
-  /* margin: 0 200%; */
   color: #fff;
   font-family: "GenYoGothic TW";
   font-weight: 550;
@@ -554,7 +539,6 @@ input[type="checkbox"]:checked + span {
     margin-bottom: 0;
   }
   .check_bubble {
-    /* padding: 10%; */
     margin: 7% 16.5% 0 7%;
     background-image: url(../img/check_bubble_phone.png);
   }

@@ -150,7 +150,6 @@ body {
   position: fixed;
   top: 0;
   z-index: 999;
-  /*background-image: url(../img/menu.png);*/
   background: rgb(255, 255, 255);
   background: linear-gradient(
     137deg,
@@ -338,11 +337,6 @@ body {
   color: inherit !important;
   text-decoration: none !important;
 }
-
-/* .theater-bar,
-.movie-bar {
-  display: inline-block;
-} */
 
 /* select bar 影城 */
 .select-box {
@@ -617,10 +611,6 @@ h1 {
 /* 下面 text */
 
 @media screen and (max-width: 576px) {
-  /* .caution {
-    width: 89.95%;
-  } */
-
   .caution ol h1,
   .explain ol h1 {
     font-size: 20px;
