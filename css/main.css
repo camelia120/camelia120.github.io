@@ -2283,6 +2283,15 @@ body {
 .footer-right {
   vertical-align: middle;
 }
+@media (max-width: 1440px) {
+  .span2 {
+    font-size: 24px;
+    width: 25%;
+  }
+  .span0 {
+    width: 62%;
+  }
+}
 @media (max-width: 576px) {
   /* 公告 */
   .accordion {
